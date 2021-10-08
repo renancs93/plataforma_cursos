@@ -1,5 +1,6 @@
 {% extends 'base.html'%} 
 {% block 'titulo'%} Home {% endblock%} 
+{% block 'sair' %}<a class="navbar-brand" href="{% url 'sair' %}">Sair</a>{% endblock  %}
 {% block 'body'%}
 <div class="container">
   <br />
@@ -8,7 +9,7 @@
     {% for i in cursos %}
       <div style="margin-top: 20px" class="col-md">
         <div class="card" style="width: 18rem">
-          <img class="card-img-top" src="{{i.thumb.url}}" alt="Card image cap" style="object-fit: contain; height: 225px;" />
+          <img class="card-img-top" src="{{i.thumb.url}}" alt="Card image cap" style="object-fit: fill; height: 225px;" />
           <div class="card-body">
             <h5 class="card-title">{{i.nome}}</h5>
             <p class="card-text">{{i.descricao}}</p>
